@@ -37,7 +37,8 @@ texts.push([
 	"Help us get better!", // 32
 	"File issues or make Pull Requests on our <a href=\"https://github.com/Vita3K/Vita3K\">GitHub repository</a>.", // 33
 	"What's new", // 34
-	"We have a blog where we regularly publish detailed reports with the latest progress in our work. Come to read what's new!" // 35
+	"We have a blog where we regularly publish detailed reports with the latest progress in our work. Come to read what's new!", // 35
+	"Quickstart", // 36
 ])
 
 // Italian (translation provided by Rinnegatamante)

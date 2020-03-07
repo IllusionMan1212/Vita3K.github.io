@@ -1,0 +1,115 @@
+---
+layout: default
+texts: compatibility
+---
+<section class="text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1>
+                    <strong>Quickstart</strong>
+                </h1>
+                <br>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-1">Get started with Vita3K and play your favorite PSVita games!</p>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mt-4">This serves as both a FAQ and a quickstart guide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-primary text-white">
+    <div class="container">
+        <h2>Can I run it?</h2>
+        <div class="my-5">
+        <h4 class="text-white text-center">You can most definitely run it <b>if</b> your PC meets these:</h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h5><b>Minimum requirements</b></h5>
+                <ul>
+                    <li>OpenGL 4.1 (some games' graphics might be broken)</li>
+                    <li>A x64 CPU with AVX</li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <h5><b>Recommended requirements</b></h5>
+                <ul>
+                    <li>OpenGL 4.3 and above (for shader interlock)</li>
+                    <li>A modern x64 CPU with AVX</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-white">
+    <div class="container">
+        <h2>Where do I get the games?</h2>
+        <p>Since the purpose of Vita3K is <b class="text-danger">not</b> to enable illegal activity, you are required to dump your own games.</p>
+        <p>Currently, Vita3K only supports maidumps or FAGDec decrypted games or manually decrypted games.
+            The games should be in a .zip or .vpk format if you want to install them from the emulator, or if you prefer to copy them yourself,
+            you can drag and drop the game folder in your <code>pref_path/ux0/app</code> folder.</p>
+        <p><code>pref_path</code> defaults are:
+            <br><code>%Appdata%/Vita3K/Vita3K</code> on windows
+            <br><code>~/.local/share/Vita3K/Vita3K</code> on linux
+            <br><code>~/Library/Application Support/Vita3K</code> on macOS
+        </p>
+        <div class="my-5">
+            <h4>How to dump your games</h4>
+            <p class="my-3">There are several ways to dump and get decrypted games but we will only mention the most popular in order of their accuracy.</p>
+            <ul class="my-2">
+                <li class="my-3"><h5>Decrypting it yourself</h5></li>
+                <p>TODO:</p>
+                <li class="my-3"><h5>Using <a href="https://github.com/TheOfficialFloW/VitaShell/releases">Vitashell</a> and 
+                    <a href="https://github.com/CelesteBlue-dev/PSVita-RE-tools/tree/master/FAGDec/build">FAGDec</a></h5></li>
+                <ol>
+                    <li>Download <a href="https://github.com/TheOfficialFloW/VitaShell/releases">Vitashell</a> and 
+                        <a href="https://github.com/CelesteBlue-dev/PSVita-RE-tools/tree/master/FAGDec/build">FAGDec</a> and install them to your PS Vita</li>
+                    <li>
+                        <ol type="A">
+                            <li>If you're dumping from a cartridge:</li>
+                            Launch Vitashell and navigate to <code>gro0/app</code>
+                            <li>If you're dumping a digital game:</li>
+                            Launch Vitashell and navigate to <code>ux0/app</code> (or wherever your games are) and choose a game you want to dump
+                        </ol>
+                    </li>
+                    <li>Hover over your game's folder and press <code>△</code> then choose <code>Open decrypted</code></li>
+                    <li>Now copy everything inside the game's folder and paste it in a folder of your choosing</li>
+                    <p class="my-2">That's the game files done, now we need to use FAGDec to decrypt the selfs.</p>
+                    <li>Launch FAGDec and scroll down until you find the game you want to dump</li>
+                    <li>Hover on the game and press the <code>✖</code> button, wait for FAGDec to find all the modules and then select <code>DECRYPT ALL</code></li>
+                    <li>You will see that the modules have been listed on the right side of the screen. Now go back to the main menu and press <code>Start</code></li>
+                    <li>You will see two options here, select the one that says <code>[START] START DECRYPT(SELF)</code></li>
+                    <li>Now just wait until it finishes decrypting the game modules</li>
+                    <li>You can find the output files in <code>ux0/FAGDec/app/'title_id'</code></li>
+                    <p class="my-3">Now all you gotta do is take the files that FAGDec ouputted and put them in the previously copied folder from VitaShell, 
+                        if asked to replace some files, confirm the replacement.</p>
+                    <p><b>It's very <u class="text-danger">important</u> that the folder containing the game files be named as the game's Title ID.</b></p>
+                </ol>
+                <li class="my-3"><h5>Using <a href="https://github.com/LioMajor/MaiDumpToolEN/releases">Maidump</a></h5></li>
+                <ol class="my-3">
+                    <li>Install maidump</li>
+                    <li>Launch maidump and select <code>Extract/Decrypt content</code></li>
+                    <li>Choose the game you wanna dump and press the <code>◯</code> button</li>
+                    <li>Select <code>Extract the game and decrypt eboot (incl. suprx)</code></li>
+                    <li>Now wait for the game to finish dumping (dumping sometimes fails since maidump isn't stable)</li>
+                    <li>You can find your dumped game in <code>ux0/mai/'title_id'</code></li>
+                </ol>
+            </ul>
+            <small class="my-5">Note: .pkg installation coming soon™</small>
+        </div>
+    </div>
+</section>
+<section class="bg-white text-dark">
+    <div class="container">
+        <h2>Installing the firmware</h2>
+        <p>Some games require the system modules be present for Vita3K to (low level) emulate them. This can be done by installing the PS Vita firmware through Vita3K.</p>
+        <p>The firmware can be downloaded from the official <a href="https://www.playstation.com/en-us/support/system-updates/ps-vita/">Playstation website</a>,
+        BUT, Sony only provides one part of the full firmware on their website since they don't update the other part as much.</p>
+        <p>So, the solution for this is to acquire the other part from a <a href="https://archive.midnightchannel.net/SonyPS/Firmware/?cat=psv">3rd party</a>.
+        Make sure to download the "systemdata" part.</p>
+        <p>And install <b>both</b> firmware packages using Vita3K's <code>File > Install Firmware</code> menu option.</p>
+    </div>
+</section>
