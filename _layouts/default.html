@@ -29,7 +29,10 @@
                 }
 
                 function GetFirmware() {
-                    $http.get("http://fus01.psp2.update.playstation.net/update/psp2/list/us/psp2-updatelist.xml")
+                    // $http.defaults.useXDomain = true;
+                    // $http.defaults.withCredentials = true;
+                    // $http.defaults.headers = {'Access-Control-Allow-Origin': 'http://localhost:3000'}
+                    $http.get("//fus01.psp2.update.playstation.net/update/psp2/list/us/psp2-updatelist.xml")
                     .success(function(xml) {
                         let parser = new DOMParser();
                         xmldoc = parser.parseFromString(xml, "text/xml")
