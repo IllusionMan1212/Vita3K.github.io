@@ -52,6 +52,17 @@ a {
   transition: all 0.2s;
 }
 
+.reqs p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.reqs > div:first-of-type {
+  background: url('../placeholder.png') no-repeat center;
+  background-size: 32px;
+  min-height:100%;
+}
+
 .progress {
   background-color: #00000000;
 }

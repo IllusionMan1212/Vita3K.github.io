@@ -14,50 +14,82 @@ texts: compatibility
             <div class="col-lg-8 mx-auto">
                 <p class="text-faded mb-1">Get started with Vita3K and play your favorite PSVita games!</p>
             </div>
-            <div class="col-lg-8 mx-auto">
-                <p class="text-faded mt-4">This serves as both a FAQ and a quickstart guide.</p>
-            </div>
         </div>
     </div>
 </section>
 <section class="bg-primary text-white">
     <div class="container">
-        <h2>Can I run it?</h2>
+        <h1 class="text-center">Hardware Requirements</h1>
         <div class="my-5">
-        <h4 class="text-white text-center">You can most definitely run it <b>if</b> your PC meets these:</h4>
+        <h5 class="text-white">The emulator performance and accuracy varies depending on your hardware. We cannot guarantee it will perform well if your PC barely meets the minimum requirements. 
+            For the best experience make sure you're within the recommended requirements as most of the reported games are tested with such requirements.</h5>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <h5><b>Minimum requirements</b></h5>
-                <ul>
-                    <li>OpenGL 4.1 (some games' graphics might be broken)</li>
-                    <li>A x64 CPU with AVX</li>
-                </ul>
+            <div class="col-lg-6 d-flex flex-column">
+                <h4><b>Minimum requirements</b></h4>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>GPU that supports OpenGL 4.1 (some games' graphics might be broken)</p>
+                    </div>
+                </div>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>CPU with the AVX instruction set</p>
+                    </div>
+                </div>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>Minimum of 4GB RAM</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-5">
-                <h5><b>Recommended requirements</b></h5>
-                <ul>
-                    <li>OpenGL 4.3 and above (for shader interlock)</li>
-                    <li>A modern x64 CPU with AVX</li>
-                </ul>
+            <div class="col-lg-5 d-flex flex-column">
+                <h4><b>Recommended requirements</b></h4>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>GPU that supports OpenGL 4.3 and above</p>
+                    </div>
+                </div>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>GPU that supports shader interlock</p>
+                    </div>
+                </div>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>CPU with the AVX instruction set</p>
+                    </div>
+                </div>
+                <div class="row no-gutters reqs">
+                    <div class="col-2 col-sm-1 col-lg-1 mx-2"></div>
+                    <div class="col-9 col-sm-10 col-lg-10">
+                        <p>8GB of RAM or greater</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <section class="bg-dark text-white">
     <div class="container">
-        <h2>Where do I get the games?</h2>
+        <h1 class="text-center mb-5">Dumping Games</h1>
         <p>Since the purpose of Vita3K is <b class="text-danger">not</b> to enable illegal activity, you are required to dump your own games.</p>
         <p>Currently, Vita3K only supports maidumps or FAGDec decrypted games or manually decrypted games.
             The games should be in a .zip or .vpk format if you want to install them from the emulator, or if you prefer to copy them yourself,
             you can drag and drop the game folder in your <code>pref_path/ux0/app</code> folder.</p>
         <p><code>pref_path</code> defaults are:
-            <br><code>%Appdata%/Vita3K/Vita3K</code> on windows
+            <br><code>%Appdata%/Roaming/Vita3K/Vita3K</code> on windows
             <br><code>~/.local/share/Vita3K/Vita3K</code> on linux
             <br><code>~/Library/Application Support/Vita3K</code> on macOS
         </p>
         <div class="my-5">
-            <h4>How to dump your games</h4>
+            <h3>How to dump your games</h3>
             <p class="my-3">There are several ways to dump and get decrypted games but we will only mention the most popular in order of their accuracy.</p>
             <ul class="my-2">
                 <li class="my-3"><h5>Decrypting it yourself</h5></li>
@@ -104,7 +136,7 @@ texts: compatibility
 </section>
 <section class="bg-white text-dark">
     <div class="container">
-        <h2>Installing the firmware</h2>
+        <h1 class="text-center mb-5">Installing the firmware</h1>
         <p>Some games require the system modules be present for Vita3K to (low level) emulate them. This can be done by installing the PS Vita firmware through Vita3K.</p>
         <p>The firmware can be downloaded from the official <a href="https://www.playstation.com/en-us/support/system-updates/ps-vita/">Playstation website</a>,
         BUT, Sony only provides one part of the full firmware on their website since they don't update the other part as much.</p>
