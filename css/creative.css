@@ -58,9 +58,8 @@ a {
 }
 
 .reqs > div:first-of-type {
-  background: url('../placeholder.png') no-repeat center;
-  background-size: 32px;
   min-height:100%;
+  filter: invert(48%) sepia(95%) saturate(2625%) hue-rotate(338deg) brightness(100%) contrast(89%);
 }
 
 .progress {
